@@ -22,7 +22,7 @@ interface CartState {
 }
 
 const CartContext = createContext<CartState | null>(null)
-const KEY = 'your-store-cart'
+const KEY = 'mirra-cart'
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<CartLine[]>(() => {

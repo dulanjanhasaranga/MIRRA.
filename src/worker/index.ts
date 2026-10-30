@@ -15,7 +15,7 @@ app.post('/api/orders', async (c) => {
   const order = await c.req.json<{ email?: string; items?: { id: string; quantity: number }[] }>().catch(() => null)
   if (!order?.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(order.email)) return c.json({ error: 'Enter a valid email address.' }, 400)
   if (!order.items?.length) return c.json({ error: 'Your bag is empty.' }, 400)
-  const reference = `YS-${Date.now().toString(36).toUpperCase().slice(-6)}`
+  const reference = `MR-${Date.now().toString(36).toUpperCase().slice(-6)}`
   return c.json({ reference })
 })
 

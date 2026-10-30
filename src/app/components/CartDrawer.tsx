@@ -57,8 +57,8 @@ export function CartDrawer() {
             {cart.items.length === 0 ? (
               <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
                 <ShoppingBag className="size-6 text-faint" />
-                <p className="mt-4 font-display text-[28px]">Nothing here yet</p>
-                <p className="mt-1 text-[14px] text-muted">Good things take a moment to choose.</p>
+                <p className="mt-4 text-[20px] font-semibold">Your bag is empty</p>
+                <p className="mt-1 text-[14px] text-muted">Find something you love in the new drop.</p>
                 <Button
                   variant="secondary"
                   className="mt-6"
@@ -73,7 +73,7 @@ export function CartDrawer() {
             ) : (
               <>
                 <div className="px-6 pt-5">
-                  <p className="text-[13px] text-muted">{remaining > 0 ? `${money(remaining)} away from free shipping` : 'Free shipping unlocked'}</p>
+                  <p className="text-[13px] text-muted">{remaining > 0 ? `You are ${money(remaining)} away from free shipping` : 'Free shipping unlocked'}</p>
                   <div className="mt-2 h-1.5 overflow-hidden rounded-[3px] bg-surface-2">
                     <motion.div className="h-full rounded-[3px] bg-fg" initial={false} animate={{ width: `${progress * 100}%` }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} />
                   </div>
@@ -91,7 +91,7 @@ export function CartDrawer() {
                         className="overflow-hidden"
                       >
                         <div className="flex gap-4 py-4">
-                          <Link to={`/product/${item.slug}`} onClick={() => cart.setOpen(false)} className="image-frame size-[88px] shrink-0 rounded-[16px]">
+                          <Link to={`/product/${item.slug}`} onClick={() => cart.setOpen(false)} className="image-frame size-[88px] shrink-0 rounded-[8px]">
                             <img src={item.product.image} alt="" className="size-full object-cover" />
                           </Link>
                           <div className="flex min-w-0 flex-1 flex-col">
@@ -128,7 +128,7 @@ export function CartDrawer() {
                     <span className="text-muted">Subtotal</span>
                     <span className="tabular-nums">{money(cart.subtotal)}</span>
                   </div>
-                  <p className="mt-1 text-[12.5px] text-faint">Shipping and taxes are calculated at checkout.</p>
+                  <p className="mt-1 text-[12.5px] text-faint">Shipping and taxes are calculated at checkout. Items are not reserved.</p>
                   <Button
                     size="lg"
                     className="mt-4 w-full"

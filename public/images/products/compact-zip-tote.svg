@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="fabric-167" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#e2d3b5" />
+      <stop offset="0.52" stop-color="#d8c39b" />
+      <stop offset="1" stop-color="#a89879" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shade" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="#f2ece4" />
+  
+  <circle cx="300" cy="392" r="258" fill="url(#glow)" opacity=".9" />
+  <circle cx="300" cy="392" r="258" fill="none" stroke="#ffffff" stroke-opacity=".55" />
+  <ellipse cx="302" cy="728" rx="128" ry="20" fill="#1c1a17" fill-opacity=".16" filter="url(#shade)" />
+  <g>
+        <path d="M 240 300 C 240 212 360 212 360 300" fill="none" stroke="#a89879" stroke-width="10" stroke-linecap="round" />
+        <path d="M 178 300 L 422 300 L 440 620 C 380 638 220 638 160 620 Z" fill="url(#fabric-167)" stroke="#756954" stroke-width="2" stroke-linejoin="round" />
+        <path d="M 190 316 L 410 316" fill="none" stroke="#a89879"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".5" />
+        <path d="M 174 596 C 240 614 360 614 428 596" fill="none" stroke="#a89879"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".3" />
+        <path d="M 226 300 L 226 590" fill="none" stroke="#fffdf8" stroke-opacity=".38" stroke-width="1.3" stroke-dasharray="6 6" />
+        <path d="M 374 300 L 374 590" fill="none" stroke="#fffdf8" stroke-opacity=".38" stroke-width="1.3" stroke-dasharray="6 6" />
+        <circle cx="196" cy="336" r="4" fill="none" stroke="#c9a961" stroke-width="2.4" />
+        <circle cx="404" cy="336" r="4" fill="none" stroke="#c9a961" stroke-width="2.4" />
+      </g>
+  <rect width="600" height="800" filter="url(#grain)" opacity=".055" style="mix-blend-mode:multiply" />
+</svg>

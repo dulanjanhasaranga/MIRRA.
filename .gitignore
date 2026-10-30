@@ -6,3 +6,7 @@ dist
 !.dev.vars.example
 .DS_Store
 *.log
+
+# Specific
+.specific
+specific.local

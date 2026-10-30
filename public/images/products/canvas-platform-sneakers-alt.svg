@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="fabric-106" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#5b5a59" />
+      <stop offset="0.52" stop-color="#22201f" />
+      <stop offset="1" stop-color="#1b1918" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shade" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="#e0ddd8" />
+  
+  <circle cx="300" cy="392" r="258" fill="url(#glow)" opacity=".9" />
+  <circle cx="300" cy="392" r="258" fill="none" stroke="#ffffff" stroke-opacity=".55" />
+  <ellipse cx="302" cy="700" rx="128" ry="20" fill="#1c1a17" fill-opacity=".16" filter="url(#shade)" />
+  <g>
+        <path d="M 158 576 C 158 566 170 560 186 562 L 462 574 C 482 584 484 624 462 632 L 178 632 C 154 630 144 600 158 576 Z" fill="#f7f5f0" stroke="#121111" stroke-width="2" />
+        <path d="M 168 596 L 470 604" stroke="#d8d2c6" stroke-width="2" stroke-dasharray="12 9" />
+        <path d="M 176 572 C 190 540 206 506 226 474 C 234 460 252 454 268 462 C 282 470 290 486 296 504 C 304 528 316 552 336 566 C 366 586 410 588 450 580 L 462 574 L 178 562 Z" fill="url(#fabric-106)" stroke="#121111" stroke-width="2" stroke-linejoin="round" />
+        <path d="M 226 474 C 236 462 250 456 264 460" fill="none" stroke="#1b1918"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".4" />
+        <path d="M 296 504 C 330 508 366 512 392 528" fill="none" stroke="#1b1918"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".35" />
+        <path d="M 336 566 C 366 586 410 588 450 580" fill="none" stroke="#1b1918"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".3" />
+        <path d="M 250 486 L 320 498" stroke="#5b5a59" stroke-width="5" stroke-linecap="round" />
+        <path d="M 244 508 L 314 520" stroke="#5b5a59" stroke-width="5" stroke-linecap="round" />
+        <path d="M 240 530 L 310 542" stroke="#5b5a59" stroke-width="5" stroke-linecap="round" />
+        <path d="M 252 474 L 258 486" stroke="#121111" stroke-width="2" />
+        <path d="M 246 496 L 252 508" stroke="#121111" stroke-width="2" />
+        <path d="M 242 518 L 248 530" stroke="#121111" stroke-width="2" />
+      </g>
+  <rect width="600" height="800" filter="url(#grain)" opacity=".055" style="mix-blend-mode:multiply" />
+</svg>

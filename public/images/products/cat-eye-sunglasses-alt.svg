@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="fabric-140" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#9f897b" />
+      <stop offset="0.52" stop-color="#7d5f4c" />
+      <stop offset="1" stop-color="#624a3b" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shade" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="#e7e2dc" />
+  
+  <circle cx="300" cy="392" r="258" fill="url(#glow)" opacity=".9" />
+  <circle cx="300" cy="392" r="258" fill="none" stroke="#ffffff" stroke-opacity=".55" />
+  <ellipse cx="300" cy="728" rx="150" ry="20" fill="#1c1a17" fill-opacity=".16" filter="url(#shade)" />
+  <g>
+        <path d="M 156 336 C 156 300 212 288 250 306 L 262 358 C 262 404 212 424 178 406 C 156 394 152 362 156 336 Z" fill="url(#fabric-140)" stroke="#443329" stroke-width="2" stroke-linejoin="round" />
+        <path d="M 444 336 C 444 300 388 288 350 306 L 338 358 C 338 404 388 424 422 406 C 444 394 448 362 444 336 Z" fill="url(#fabric-140)" stroke="#443329" stroke-width="2" stroke-linejoin="round" />
+        <path d="M 262 344 C 280 332 320 332 338 344" fill="none" stroke="#443329" stroke-width="8" stroke-linecap="round" />
+        <path d="M 156 336 L 118 320" stroke="#443329" stroke-width="7" stroke-linecap="round" />
+        <path d="M 444 336 L 482 320" stroke="#443329" stroke-width="7" stroke-linecap="round" />
+        <path d="M 170 338 C 176 316 216 312 238 330" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="6" stroke-linecap="round" />
+        <path d="M 362 330 C 384 312 424 316 430 338" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="6" stroke-linecap="round" />
+      </g>
+  <rect width="600" height="800" filter="url(#grain)" opacity=".055" style="mix-blend-mode:multiply" />
+</svg>

@@ -1,32 +1,30 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/inter';
-@import '@fontsource/instrument-serif';
-@import '@fontsource/instrument-serif/400-italic.css';
 
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
 
-  --color-bg: #f6f1ea;
-  --color-surface: #fffdf9;
-  --color-surface-2: #efe8de;
-  --color-line: #e5dcd0;
-  --color-line-strong: #d2c7b8;
-  --color-fg: #1c1a17;
-  --color-muted: #6e665c;
-  --color-faint: #9c9389;
-  --color-accent: #b4573b;
-  --color-accent-soft: #f3e2d9;
+  --color-bg: #ffffff;
+  --color-surface: #f7f7f7;
+  --color-surface-2: #efefef;
+  --color-line: #e8e8e8;
+  --color-line-strong: #d5d5d5;
+  --color-fg: #111111;
+  --color-muted: #6a6a6a;
+  --color-faint: #9b9b9b;
+  --color-accent: #d81f3f;
+  --color-accent-soft: #ffe9ee;
 
-  --radius-control: 14px;
-  --radius-card: 22px;
-  --radius-image: 26px;
-  --radius-dialog: 24px;
+  --radius-control: 8px;
+  --radius-card: 14px;
+  --radius-image: 10px;
+  --radius-dialog: 16px;
 
-  --shadow-soft: 0 1px 2px rgb(28 26 23 / 0.05), 0 12px 40px -16px rgb(28 26 23 / 0.18);
-  --shadow-drawer: 0 0 0 1px rgb(28 26 23 / 0.05), -20px 0 60px -20px rgb(28 26 23 / 0.3);
+  --shadow-soft: 0 1px 2px rgb(17 17 17 / 0.04), 0 16px 40px -24px rgb(17 17 17 / 0.25);
+  --shadow-drawer: 0 0 0 1px rgb(17 17 17 / 0.06), -20px 0 60px -20px rgb(17 17 17 / 0.3);
 
-  --animate-marquee: marquee 36s linear infinite;
+  --animate-marquee: marquee 32s linear infinite;
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -75,7 +73,7 @@
     outline-offset: 2px;
   }
   ::selection {
-    background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+    background: color-mix(in srgb, var(--color-accent) 18%, transparent);
   }
   img {
     user-select: none;
@@ -92,10 +90,10 @@
 }
 
 @utility font-display {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.015em;
-  line-height: 1;
+  font-family: var(--font-sans);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
 }
 
 @utility text-balance {
@@ -113,9 +111,8 @@
   }
 }
 
-/* Product imagery sits on a cream that matches the photos, so the frame
-   disappears and the object floats. */
+/* Product imagery sits on a soft neutral so the cut-out floats. */
 @utility image-frame {
-  background: #efe9df;
+  background: #f2f0ec;
   overflow: hidden;
 }

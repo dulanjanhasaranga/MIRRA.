@@ -1,6 +1,6 @@
 import { Check, Lock } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
-import { Link, Navigate, useLocation, useNavigate } from 'react-router'
+import { Navigate, useLocation, useNavigate } from 'react-router'
 
 import { FREE_SHIPPING_AT } from '../../data/products'
 import { Button, ButtonLink, Container, inputClass } from '../components/ui'
@@ -24,7 +24,7 @@ export function Checkout() {
 
   if (cart.items.length === 0) return <Navigate to="/shop" replace />
 
-  const shipping = cart.subtotal >= FREE_SHIPPING_AT ? 0 : 8
+  const shipping = cart.subtotal >= FREE_SHIPPING_AT ? 0 : 4.95
   const total = cart.subtotal + shipping
   const set = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => setForm({ ...form, [key]: e.target.value })
 
@@ -91,7 +91,7 @@ export function Checkout() {
             <div className="mt-4 rounded-card border border-line bg-surface p-5">
               <div className="flex items-center gap-2 text-[14px] text-muted">
                 <Lock className="size-4" />
-                This is a demo checkout. Connect Stripe in <code className="rounded-[6px] bg-surface-2 px-1.5 py-0.5 text-[12.5px]">src/worker/index.ts</code> to take payments.
+                This is a demo checkout. No payment is collected and no order is shipped.
               </div>
               <div className="mt-4 grid grid-cols-2 gap-3 opacity-60">
                 <input disabled placeholder="Card number" className={`${inputClass} col-span-2`} />
@@ -102,7 +102,7 @@ export function Checkout() {
           </section>
           {state === 'error' && <p className="text-[14px] text-accent">{error}</p>}
           <Button type="submit" size="lg" loading={state === 'sending'} className="w-full sm:w-auto">
-            Place order  {money(total)}
+            Complete demo order · {money(total)}
           </Button>
         </form>
 
@@ -157,17 +157,17 @@ export function OrderConfirmed() {
         <p className="mt-4 text-[16px] leading-relaxed text-muted">
           {state ? (
             <>
-              Order <span className="font-medium text-fg">{state.reference}</span> is on its way to the studio. A confirmation is heading to {state.email}.
+              Demo reference <span className="font-medium text-fg">{state.reference}</span> was created. No payment was taken and no order will be shipped.
             </>
           ) : (
-            'Your order is confirmed.'
+            'This is a demo order page. No payment was taken.'
           )}
         </p>
         <ButtonLink to="/shop" variant="secondary" className="mt-8">
           Continue shopping
         </ButtonLink>
         <p className="mt-10 text-[13px] text-faint">
-          Questions? <Link to="/about" className="underline underline-offset-4">Write to us</Link>
+          Explore more styles in the catalogue.
         </p>
       </div>
     </Container>

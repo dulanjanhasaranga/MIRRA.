@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="fabric-161" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#e2d3b5" />
+      <stop offset="0.52" stop-color="#d8c39b" />
+      <stop offset="1" stop-color="#a89879" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shade" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="#f0ede8" />
+  
+  <circle cx="300" cy="392" r="258" fill="url(#glow)" opacity=".9" />
+  <circle cx="300" cy="392" r="258" fill="none" stroke="#ffffff" stroke-opacity=".55" />
+  <ellipse cx="302" cy="728" rx="128" ry="20" fill="#1c1a17" fill-opacity=".16" filter="url(#shade)" />
+  <g>
+        <path d="M 196 412 C 196 302 404 302 404 412 Z" fill="url(#fabric-161)" stroke="#756954" stroke-width="2" stroke-linejoin="round" />
+        <path d="M 300 306 C 280 340 276 380 276 412" fill="none" stroke="#a89879"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".3" />
+        <path d="M 300 306 C 320 340 324 380 324 412" fill="none" stroke="#a89879"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".3" />
+        <path d="M 184 412 C 184 388 300 376 412 410 L 434 446 C 330 476 220 468 178 442 C 168 434 174 420 184 412 Z" fill="url(#fabric-161)" stroke="#756954" stroke-width="2" stroke-linejoin="round" />
+        <path d="M 184 412 C 240 400 340 400 410 412" fill="none" stroke="#a89879"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".5" />
+        <path d="M 396 400 C 420 402 430 412 434 424" fill="none" stroke="#a89879"  stroke-width="1.7" stroke-linecap="round" stroke-opacity=".4" />
+        <circle cx="300" cy="308" r="7" fill="#a89879" fill-opacity=".4" />
+        <path d="M 272 430 L 328 430" stroke="#fffdf8" stroke-opacity=".3" stroke-width="1.4" stroke-dasharray="6 6" />
+      </g>
+  <rect width="600" height="800" filter="url(#grain)" opacity=".055" style="mix-blend-mode:multiply" />
+</svg>

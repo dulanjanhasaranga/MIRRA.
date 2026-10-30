@@ -1,68 +1,59 @@
 import { motion } from 'motion/react'
-import { useState } from 'react'
 import { Link } from 'react-router'
 
-import { money, useCart } from '../lib/cart'
+import { discount, type Product } from '../../data/products'
+import { money } from '../lib/cart'
 import { cx } from '../lib/cx'
-import type { Product } from '../../data/products'
 
 export function ProductCard({ product, index = 0, priority }: { product: Product; index?: number; priority?: boolean }) {
-  const cart = useCart()
-  const [added, setAdded] = useState(false)
-
-  function quickAdd(e: React.MouseEvent) {
-    e.preventDefault()
-    cart.add(product, product.options?.values[0])
-    setAdded(true)
-    window.setTimeout(() => setAdded(false), 1400)
-  }
+  const off = discount(product)
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '0px 0px -6% 0px' }}
-      transition={{ duration: 0.7, delay: (index % 4) * 0.07, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.55, delay: (index % 4) * 0.05, ease: [0.22, 1, 0.36, 1] }}
       className="group"
     >
       <Link to={`/product/${product.slug}`} className="block">
         <div className="image-frame relative aspect-[3/4] rounded-image">
           <img
             src={product.image}
-            alt={product.name}
+            alt={`${product.name} ${product.image.endsWith('.webp') ? 'styling photo' : 'illustration'}`}
             loading={priority ? 'eager' : 'lazy'}
-            className="size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+            className={cx('size-full object-cover transition-opacity duration-500', product.hoverImage !== product.image && 'group-hover:opacity-0')}
           />
-          {product.badge && (
-            <span
-              className={cx(
-                'absolute left-3 top-3 rounded-[10px] px-2.5 py-1 text-[12px] font-medium backdrop-blur',
-                product.badge === 'Low stock' ? 'bg-accent-soft/90 text-accent' : 'bg-surface/90 text-fg',
-              )}
-            >
-              {product.badge}
-            </span>
+          {product.hoverImage !== product.image && (
+            <img
+              src={product.hoverImage}
+              alt=""
+              aria-hidden
+              loading="lazy"
+              className="absolute inset-0 size-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            />
           )}
-          <button
-            type="button"
-            onClick={quickAdd}
-            className={cx(
-              'absolute inset-x-3 bottom-3 h-11 translate-y-2 rounded-[12px] bg-fg text-[14px] font-medium text-bg opacity-0 transition-[opacity,transform,background-color] duration-300 hover:bg-[#33302b] group-hover:translate-y-0 group-hover:opacity-100 focus-visible:translate-y-0 focus-visible:opacity-100',
-              added && 'bg-accent hover:bg-accent',
+          <div className="absolute left-2.5 top-2.5 flex flex-col items-start gap-1.5">
+            {off > 0 && <span className="rounded-[6px] bg-accent px-2 py-1 text-[11.5px] font-semibold tracking-wide text-white">-{off}%</span>}
+            {product.badge && (
+              <span className={cx('rounded-[6px] px-2 py-1 text-[11.5px] font-medium', product.badge === 'New' ? 'bg-fg text-bg' : 'bg-bg/95 text-fg')}>
+                {product.badge}
+              </span>
             )}
-          >
-            {added ? 'Added to bag' : 'Add to bag'}
-          </button>
-        </div>
-        <div className="mt-3.5 flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <h3 className="truncate text-[15px] font-medium">{product.name}</h3>
-            <p className="mt-0.5 truncate text-[13px] text-muted">{product.short}</p>
           </div>
-          <p className="shrink-0 text-[15px] tabular-nums">
-            {product.compareAt && <span className="mr-2 text-faint line-through">{money(product.compareAt)}</span>}
-            {money(product.price)}
-          </p>
+          <span className="absolute inset-x-2.5 bottom-2.5 hidden h-10 translate-y-2 place-items-center rounded-control bg-fg text-[13.5px] font-medium text-bg opacity-0 transition-[opacity,transform] duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100 sm:grid">
+            View details
+          </span>
+        </div>
+        <div className="mt-2.5">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="min-w-0 truncate text-[14px] font-medium">{product.name}</h3>
+            <p className="shrink-0 text-[14px] font-semibold tabular-nums">
+              {money(product.price)}
+              {product.compareAt && <span className="ml-1.5 text-[12.5px] font-normal text-faint line-through">{money(product.compareAt)}</span>}
+            </p>
+          </div>
+          <p className="mt-1 truncate text-[12.5px] text-muted">{product.short}</p>
         </div>
       </Link>
     </motion.article>
