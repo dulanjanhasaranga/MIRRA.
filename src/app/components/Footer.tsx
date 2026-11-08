@@ -8,7 +8,7 @@ const columns = [
   {
     title: 'Explore',
     links: [
-      ['All products', '/shop'], ['Women', '/shop?department=women'], ['Men', '/shop?department=men'], ['New in', '/shop?sort=new'], ['Dresses', '/shop?category=dresses'],
+      ['All products', '/shop'], ['Women', '/shop?department=women'], ['Men', '/shop?department=men'], ["Men's sale", '/shop?department=men&sale=1'], ['New in', '/shop?sort=new'], ['Dresses', '/shop?category=dresses'],
       ['Denim', '/shop?category=denim'], ['Shoes', '/shop?category=shoes'], ['Sale', '/shop?sale=1'],
     ],
   },
@@ -20,7 +20,7 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-line bg-surface sm:mt-24">
+    <footer className="mt-16 border-t border-line bg-surface pb-[calc(56px+env(safe-area-inset-bottom))] sm:mt-24 lg:pb-0">
       <Container className="py-12 sm:py-14">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <div className="max-w-md">

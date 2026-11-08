@@ -1,5 +1,5 @@
 import { Check, Lock } from 'lucide-react'
-import { useState, type FormEvent } from 'react'
+import { useRef, useState, type FormEvent } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router'
 
 import { FREE_SHIPPING_AT } from '../../data/products'
@@ -21,8 +21,9 @@ export function Checkout() {
   const [form, setForm] = useState({ email: '', first: '', last: '', address: '', city: '', postcode: '', country: 'United States' })
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle')
   const [error, setError] = useState('')
+  const completed = useRef(false)
 
-  if (cart.items.length === 0) return <Navigate to="/shop" replace />
+  if (cart.items.length === 0 && !completed.current) return <Navigate to="/shop" replace />
 
   const shipping = cart.subtotal >= FREE_SHIPPING_AT ? 0 : 4.95
   const total = cart.subtotal + shipping
@@ -40,8 +41,9 @@ export function Checkout() {
       const body = (await response.json()) as { reference?: string; error?: string }
       if (!response.ok || !body.reference) throw new Error(body.error ?? 'Something went wrong.')
       const summary = { reference: body.reference, email: form.email, items: cart.items, total }
-      cart.clear()
+      completed.current = true
       navigate(`/order/${body.reference}`, { state: summary })
+      cart.clear()
     } catch (err) {
       setState('error')
       setError(err instanceof Error ? err.message : 'Something went wrong.')

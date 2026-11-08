@@ -1,0 +1,107 @@
+{
+  "hero-1": {
+    "photoId": 5900408,
+    "imageUrl": "https://images.pexels.com/photos/5900408/pexels-photo-5900408.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/a-woman-in-black-blazer-and-pants-standing-on-the-street-5900408/",
+    "description": "Woman in black blazer and trousers on a stone colonnade",
+    "alt": "Woman in black tailoring on a stone colonnade"
+  },
+  "hero-2": {
+    "photoId": 7760239,
+    "imageUrl": "https://images.pexels.com/photos/7760239/pexels-photo-7760239.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/a-woman-in-beige-knit-sweater-7760239/",
+    "description": "Woman in a beige knit sweater with arms raised",
+    "alt": "Woman in a beige knit sweater with arms raised"
+  },
+  "hero-3": {
+    "photoId": 7945664,
+    "imageUrl": "https://images.pexels.com/photos/7945664/pexels-photo-7945664.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/woman-in-white-shirt-and-light-trousers-in-studio-7945664/",
+    "description": "Studio portrait in a white shirt and light trousers",
+    "alt": "Studio portrait in a white shirt and light trousers"
+  },
+  "cat-dresses": {
+    "photoId": 18953353,
+    "imageUrl": "https://images.pexels.com/photos/18953353/pexels-photo-18953353.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/model-in-an-orange-midi-dress-and-boots-standing-on-one-leg-on-a-rock-18953353/",
+    "description": "Model in an orange midi dress and boots",
+    "alt": "Model in an orange midi dress"
+  },
+  "cat-tops": {
+    "photoId": 5664830,
+    "imageUrl": "https://images.pexels.com/photos/5664830/pexels-photo-5664830.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-5664830/",
+    "description": "Woman in a white off-shoulder shirt against a dark backdrop",
+    "alt": "Woman in a white off-shoulder shirt"
+  },
+  "cat-bottoms": {
+    "photoId": 11625323,
+    "imageUrl": "https://images.pexels.com/photos/11625323/pexels-photo-11625323.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/woman-wearing-oversized-blazer-and-white-pants-11625323/",
+    "description": "Woman in a blazer and wide white trousers",
+    "alt": "Woman wearing wide white trousers"
+  },
+  "cat-denim": {
+    "photoId": 24287018,
+    "imageUrl": "https://images.pexels.com/photos/24287018/pexels-photo-24287018.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/young-woman-in-a-casual-outfit-with-a-jean-jacket-posing-on-a-street-24287018/",
+    "description": "Woman in a full denim look on a city street",
+    "alt": "Woman in a full denim look"
+  },
+  "cat-outerwear": {
+    "photoId": 19628818,
+    "imageUrl": "https://images.pexels.com/photos/19628818/pexels-photo-19628818.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/woman-in-beige-blazer-and-white-pants-leaning-on-a-vintage-land-rover-car-19628818/",
+    "description": "Woman in a beige blazer and cream trousers beside a vintage truck",
+    "alt": "Woman in a beige blazer and cream trousers"
+  },
+  "cat-knitwear": {
+    "photoId": 7760234,
+    "imageUrl": "https://images.pexels.com/photos/7760234/pexels-photo-7760234.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/a-woman-wearing-a-beige-knitted-sweater-7760234/",
+    "description": "Woman in a beige knitted sweater against a plain backdrop",
+    "alt": "Woman in a beige knitted sweater"
+  },
+  "cat-shoes": {
+    "photoId": 28821783,
+    "imageUrl": "https://images.pexels.com/photos/28821783/pexels-photo-28821783.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/elegant-high-heel-shoes-on-white-background-28821783/",
+    "description": "High heels shot on a white background",
+    "alt": "High heel shoes on a white background"
+  },
+  "cat-bags": {
+    "photoId": 34027231,
+    "imageUrl": "https://images.pexels.com/photos/34027231/pexels-photo-34027231.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/flat-lay-of-stylish-accessories-with-handbag-34027231/",
+    "description": "Flat lay of a handbag with sunglasses and small accessories",
+    "alt": "Handbag and accessories flat lay"
+  },
+  "cat-accessories": {
+    "photoId": 5828579,
+    "imageUrl": "https://images.pexels.com/photos/5828579/pexels-photo-5828579.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/a-leather-wallet-and-sunglasses-on-the-wooden-surface-5828579/",
+    "description": "Leather shoes, wallet and sunglasses on a dark wooden surface",
+    "alt": "Leather shoes, wallet and sunglasses flat lay"
+  },
+  "banner-edit": {
+    "photoId": 39376662,
+    "imageUrl": "https://images.pexels.com/photos/39376662/pexels-photo-39376662.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/39376662/",
+    "description": "Woman layering a denim jacket over a white top with denim shorts",
+    "alt": "Woman layering a denim jacket over a white top"
+  },
+  "banner-accessories": {
+    "photoId": 8396300,
+    "imageUrl": "https://images.pexels.com/photos/8396300/pexels-photo-8396300.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/assorted-accessories-on-the-table-8396300/",
+    "description": "Flat lay of belts, sunglasses, jewellery and a bag on a pale surface",
+    "alt": "Flat lay of belts, sunglasses and jewellery"
+  },
+  "about-hero": {
+    "photoId": 37080686,
+    "imageUrl": "https://images.pexels.com/photos/37080686/pexels-photo-37080686.jpeg",
+    "sourcePage": "https://www.pexels.com/photo/modern-fashion-retail-store-interior-with-clothing-racks-37080686/",
+    "description": "Bright boutique interior with clothing racks and tiled floor",
+    "alt": "Boutique interior with racks of clothing"
+  }
+}

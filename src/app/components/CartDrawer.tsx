@@ -128,7 +128,7 @@ export function CartDrawer() {
                     <span className="text-muted">Subtotal</span>
                     <span className="tabular-nums">{money(cart.subtotal)}</span>
                   </div>
-                  <p className="mt-1 text-[12.5px] text-faint">Shipping and taxes are calculated at checkout. Items are not reserved.</p>
+                  <p className="mt-1 text-[12.5px] text-faint">Demo shipping is shown at checkout. Items are not reserved.</p>
                   <Button
                     size="lg"
                     className="mt-4 w-full"

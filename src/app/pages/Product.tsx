@@ -113,7 +113,7 @@ export function Product() {
               </>
             )}
           </div>
-          <p className="mt-1 text-[12.5px] text-muted">Tax included. Free shipping over $49.</p>
+          <p className="mt-1 text-[12.5px] text-muted">Demo shipping is free over $49. No payment is collected.</p>
 
           <p className="mt-5 text-pretty text-[14.5px] leading-relaxed text-muted">{product.description}</p>
 
@@ -144,10 +144,6 @@ export function Product() {
               <p className="text-[13px] font-medium">
                 Size <span className="ml-1 font-normal text-muted">{size}</span>
               </p>
-              <span className="inline-flex items-center gap-1 text-[12.5px] text-muted">
-                <Ruler className="size-3.5" />
-                True to size
-              </span>
             </div>
             <div className="mt-2.5 flex flex-wrap gap-2">
               {product.sizes.map((s) => (

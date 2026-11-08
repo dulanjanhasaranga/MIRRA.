@@ -6,6 +6,16 @@ type Env = { ASSETS: Fetcher }
 
 const app = new Hono<{ Bindings: Env }>()
 
+app.use('/api/*', async (c, next) => {
+  if (c.req.method !== 'GET' && c.req.method !== 'HEAD') {
+    const origin = c.req.header('origin')
+    if (origin && origin !== new URL(c.req.url).origin) {
+      return c.json({ error: 'Request origin is not allowed.' }, 403)
+    }
+  }
+  await next()
+})
+
 app.get('/api/health', (c) => c.json({ ok: true }))
 
 // Demo checkout: validates the order and returns a reference. Replace the body

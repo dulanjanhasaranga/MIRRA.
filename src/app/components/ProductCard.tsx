@@ -46,8 +46,8 @@ export function ProductCard({ product, index = 0, priority }: { product: Product
           </span>
         </div>
         <div className="mt-2.5">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="min-w-0 truncate text-[14px] font-medium">{product.name}</h3>
+          <div className="flex flex-col gap-0.5 sm:flex-row sm:items-start sm:justify-between sm:gap-2">
+            <h3 className="line-clamp-2 min-h-10 text-[14px] font-medium leading-5 sm:min-h-0 sm:min-w-0 sm:truncate">{product.name}</h3>
             <p className="shrink-0 text-[14px] font-semibold tabular-nums">
               {money(product.price)}
               {product.compareAt && <span className="ml-1.5 text-[12.5px] font-normal text-faint line-through">{money(product.compareAt)}</span>}

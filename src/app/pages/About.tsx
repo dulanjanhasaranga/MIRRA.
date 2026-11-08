@@ -13,8 +13,8 @@ export function About() {
         <ButtonLink to="/shop" className="mt-7">Explore the collection</ButtonLink>
       </div>
 
-      <Reveal className="image-frame mt-10 aspect-[16/9] rounded-[16px] sm:mt-12">
-        <img src="/images/edit-accessories.svg" alt="Illustrated edit of shoes and bags from the collection" className="size-full object-cover" />
+      <Reveal className="image-frame mt-10 aspect-[16/9] overflow-hidden rounded-[16px] sm:mt-12">
+        <img src="/images/home/about-hero.webp" alt="Boutique interior with racks of clothing" className="size-full object-cover" loading="lazy" />
       </Reveal>
 
       <div className="mt-12 grid gap-8 border-t border-line pt-9 sm:grid-cols-3">

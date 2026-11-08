@@ -1374,7 +1374,7 @@ const catalogue: Draft[] = [
   },
   // Men's collection
   {
-    slug: 'mens-oxford-shirt', name: "Men's Oxford shirt", price: 38,
+    slug: 'mens-oxford-shirt', name: "Men's Oxford shirt", price: 38, compareAt: 54,
     category: 'tops', department: 'men', shape: 'top-blouse', badge: 'New',
     short: 'Button-down · Regular fit',
     description: 'A clean button-down shirt that works with denim or tailoring. Cut for comfortable everyday wear.',
@@ -1383,7 +1383,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [ivory, blueWash, navy], newIn: true, featured: true,
   },
   {
-    slug: 'mens-heavyweight-tee', name: "Men's heavyweight tee", price: 24,
+    slug: 'mens-heavyweight-tee', name: "Men's heavyweight tee", price: 24, compareAt: 34,
     category: 'tops', department: 'men', shape: 'top-tee', badge: 'New',
     short: 'Crew neck · Relaxed fit',
     description: 'A substantial everyday T-shirt with a relaxed body and classic crew neck.',
@@ -1392,7 +1392,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [ivory, navy, black], newIn: true, featured: true,
   },
   {
-    slug: 'mens-linen-camp-shirt', name: "Men's camp-collar shirt", price: 36,
+    slug: 'mens-linen-camp-shirt', name: "Men's camp-collar shirt", price: 36, compareAt: 50,
     category: 'tops', department: 'men', shape: 'top-blouse', badge: 'New',
     short: 'Open collar · Short sleeves',
     description: 'An easy warm-weather shirt with a relaxed open collar and short sleeves.',
@@ -1401,7 +1401,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [ivory, sand, black], newIn: true,
   },
   {
-    slug: 'mens-relaxed-chinos', name: "Men's relaxed chinos", price: 44,
+    slug: 'mens-relaxed-chinos', name: "Men's relaxed chinos", price: 44, compareAt: 62,
     category: 'bottoms', department: 'men', shape: 'bottom-wide', badge: 'New',
     short: 'Straight leg · Everyday fit',
     description: 'Versatile chinos with a relaxed straight leg and practical pockets.',
@@ -1410,7 +1410,7 @@ const catalogue: Draft[] = [
     sizes: MEN_WAIST, colors: [sand, olive, navy], newIn: true, featured: true,
   },
   {
-    slug: 'mens-straight-jeans', name: "Men's classic blue jeans", price: 48,
+    slug: 'mens-straight-jeans', name: "Men's classic blue jeans", price: 48, compareAt: 68,
     category: 'denim', department: 'men', shape: 'jeans', badge: 'New',
     short: 'Blue denim · Five pockets',
     description: 'A classic pair of blue jeans with a familiar five-pocket construction and everyday fit.',
@@ -1419,7 +1419,7 @@ const catalogue: Draft[] = [
     sizes: MEN_WAIST, colors: [denimBlue, blueWash, black], newIn: true, featured: true,
   },
   {
-    slug: 'mens-pleated-trousers', name: "Men's pleated trousers", price: 52,
+    slug: 'mens-pleated-trousers', name: "Men's pleated trousers", price: 52, compareAt: 74,
     category: 'bottoms', department: 'men', shape: 'bottom-wide', badge: 'New',
     short: 'Front pleats · Tailored fit',
     description: 'A tailored trouser with front pleats and an easy shape through the leg.',
@@ -1428,7 +1428,7 @@ const catalogue: Draft[] = [
     sizes: MEN_WAIST, colors: [slate, sand, black], newIn: true,
   },
   {
-    slug: 'mens-cotton-overshirt', name: "Men's check overshirt", price: 56,
+    slug: 'mens-cotton-overshirt', name: "Men's check overshirt", price: 56, compareAt: 78,
     category: 'outerwear', department: 'men', shape: 'denim-jacket', badge: 'New',
     short: 'Button front · Easy layer',
     description: 'A relaxed check overshirt that layers easily over a tee or knit.',
@@ -1437,7 +1437,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [cocoa, slate, black], newIn: true,
   },
   {
-    slug: 'mens-bomber-jacket', name: "Men's bomber jacket", price: 68,
+    slug: 'mens-bomber-jacket', name: "Men's bomber jacket", price: 68, compareAt: 96,
     category: 'outerwear', department: 'men', shape: 'denim-jacket', badge: 'New',
     short: 'Zip front · Everyday layer',
     description: 'A versatile zip-front jacket with a clean shape for everyday layering.',
@@ -1446,7 +1446,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [black, olive, navy], newIn: true,
   },
   {
-    slug: 'mens-merino-crewneck', name: "Men's crewneck sweater", price: 54,
+    slug: 'mens-merino-crewneck', name: "Men's crewneck sweater", price: 54, compareAt: 76,
     category: 'knitwear', department: 'men', shape: 'sweater', badge: 'New',
     short: 'Fine knit · Crew neck',
     description: 'A clean fine-gauge sweater to wear alone or under a jacket.',
@@ -1455,7 +1455,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [navy, cream, slate], newIn: true, featured: true,
   },
   {
-    slug: 'mens-knit-polo', name: "Men's knit polo", price: 39,
+    slug: 'mens-knit-polo', name: "Men's knit polo", price: 39, compareAt: 54,
     category: 'knitwear', department: 'men', shape: 'cardigan', badge: 'New',
     short: 'Polo collar · Short sleeves',
     description: 'A short-sleeve polo with a soft collar, suited to smart-casual days.',
@@ -1464,7 +1464,7 @@ const catalogue: Draft[] = [
     sizes: MEN_APPAREL, colors: [ivory, navy, black], newIn: true,
   },
   {
-    slug: 'mens-leather-sneakers', name: "Men's low-top sneakers", price: 62,
+    slug: 'mens-leather-sneakers', name: "Men's low-top sneakers", price: 62, compareAt: 84,
     category: 'shoes', department: 'men', shape: 'sneaker', badge: 'New',
     short: 'Low top · Cushioned sole',
     description: 'An easy low-top sneaker with a cushioned sole for daily wear.',
@@ -1473,7 +1473,7 @@ const catalogue: Draft[] = [
     sizes: MEN_SHOES, colors: [ivory, black], newIn: true,
   },
   {
-    slug: 'mens-canvas-weekender', name: "Men's weekender bag", price: 58,
+    slug: 'mens-canvas-weekender', name: "Men's weekender bag", price: 58, compareAt: 80,
     category: 'bags', department: 'men', shape: 'tote', badge: 'New',
     short: 'Duffel shape · Carry handles',
     description: 'A roomy duffel for short trips, with comfortable handles and a zip closure.',
@@ -1492,22 +1492,30 @@ export const products: Product[] = catalogue.map((p) => ({
 }))
 
 export const categories: { key: Category; label: string; blurb: string; image: string }[] = [
-  { key: 'dresses', label: 'Dresses', blurb: 'Day to night', image: products.find((p) => p.slug === 'satin-slip-midi-dress')!.image },
-  { key: 'tops', label: 'Tops', blurb: 'Everyday layers', image: products.find((p) => p.slug === 'cropped-ribbed-tank')!.image },
-  { key: 'bottoms', label: 'Bottoms', blurb: 'Tailored to easy', image: products.find((p) => p.slug === 'high-waist-wide-leg-trousers')!.image },
-  { key: 'denim', label: 'Denim', blurb: 'Washed and worn', image: products.find((p) => p.slug === 'straight-leg-jeans')!.image },
-  { key: 'outerwear', label: 'Outerwear', blurb: 'Layers for now', image: products.find((p) => p.slug === 'oversized-blazer')!.image },
-  { key: 'knitwear', label: 'Knitwear', blurb: 'Softly structured', image: products.find((p) => p.slug === 'chunky-cable-cardigan')!.image },
-  { key: 'shoes', label: 'Shoes', blurb: 'Ground everything', image: products.find((p) => p.slug === 'pointed-toe-stiletto')!.image },
-  { key: 'bags', label: 'Bags', blurb: 'Carry it all', image: products.find((p) => p.slug === 'structured-tote-bag')!.image },
-  { key: 'accessories', label: 'Accessories', blurb: 'The finishing line', image: products.find((p) => p.slug === 'oval-frame-sunglasses')!.image },
+  { key: 'dresses', label: 'Dresses', blurb: 'Day to night', image: '/images/home/cat-dresses.webp' },
+  { key: 'tops', label: 'Tops', blurb: 'Everyday layers', image: '/images/home/cat-tops.webp' },
+  { key: 'bottoms', label: 'Bottoms', blurb: 'Tailored to easy', image: '/images/products/photos/pleated-wide-leg-trousers.webp' },
+  { key: 'denim', label: 'Denim', blurb: 'Washed and worn', image: '/images/home/cat-denim.webp' },
+  { key: 'outerwear', label: 'Outerwear', blurb: 'Layers for now', image: '/images/home/cat-outerwear.webp' },
+  { key: 'knitwear', label: 'Knitwear', blurb: 'Softly structured', image: '/images/home/cat-knitwear.webp' },
+  { key: 'shoes', label: 'Shoes', blurb: 'Ground everything', image: '/images/home/cat-shoes.webp' },
+  { key: 'bags', label: 'Bags', blurb: 'Carry it all', image: '/images/home/cat-bags.webp' },
+  { key: 'accessories', label: 'Accessories', blurb: 'The finishing line', image: '/images/home/cat-accessories.webp' },
 ]
+
+// Categories that actually hold stock for the selected gender, so men never
+// see an empty Dresses tab.
+export const categoriesFor = (department?: 'women' | 'men') =>
+  categories.filter((c) =>
+    products.some((p) => p.category === c.key && (!department || (p.department ?? 'women') === department)),
+  )
 
 export const bySlug = (slug: string) => products.find((p) => p.slug === slug)
 export const featured = products.filter((p) => p.featured)
 export const menProducts = products.filter((p) => p.department === 'men')
 export const newArrivals = products.filter((p) => p.newIn)
 export const onSale = products.filter((p) => p.compareAt)
+export const mensSale = products.filter((p) => p.department === 'men' && p.compareAt)
 export const discount = (p: Product) =>
   p.compareAt ? Math.round((1 - p.price / p.compareAt) * 100) : 0
 

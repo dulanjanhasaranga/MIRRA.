@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { SlidersHorizontal, X } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router'
 
 import { categories, discount, products, type Category } from '../../data/products'
@@ -26,6 +26,18 @@ const sortOptions = [
 export function Shop() {
   const [params, setParams] = useSearchParams()
   const [mobileOpen, setMobileOpen] = useState(false)
+  useEffect(() => {
+    if (!mobileOpen) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
   const department = params.get('department') === 'men' ? 'men' : params.get('department') === 'women' ? 'women' : ''
   const category = params.get('category') ?? ''
   const price = params.get('price') ?? ''
@@ -236,6 +248,9 @@ export function Shop() {
         {mobileOpen && (
           <motion.div className="fixed inset-0 z-50 bg-fg/40 lg:hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setMobileOpen(false)}>
             <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-label="Shop filters"
               initial={{ y: 32, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 32, opacity: 0 }}
@@ -245,7 +260,7 @@ export function Shop() {
             >
               <div className="flex items-center justify-between">
                 <p className="text-[20px] font-semibold">Filters</p>
-                <button type="button" aria-label="Close" onClick={() => setMobileOpen(false)} className="grid size-10 place-items-center rounded-control hover:bg-surface-2">
+                <button type="button" aria-label="Close filters" onClick={() => setMobileOpen(false)} className="grid size-10 place-items-center rounded-control hover:bg-surface-2">
                   <X className="size-5" />
                 </button>
               </div>

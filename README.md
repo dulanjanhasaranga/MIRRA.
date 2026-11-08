@@ -12,8 +12,10 @@ inventory or the exact colourway shown.
 
 ## Run it
 
+Install Bun 1.4.4 or newer. Older Bun versions cannot read this project's lockfile.
+
 ```sh
-bun install
+bun install --frozen-lockfile
 bun run dev        # http://localhost:5173
 bun run build      # dist/client (assets) + dist/store/index.js (Worker)
 ```
